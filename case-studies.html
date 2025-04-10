@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abhios Consulting - Advanced technology consulting in Cloud, Security, and Payments">
+    <title>Case Studies - Abhios Consulting</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    
+    
+<style>
+    .case-studies-section {
+        padding: 50px 0;
+    }
+    
+    .featured-case-study {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 50px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .case-study-image img {
+        border-radius: 8px;
+        max-height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .case-study-content {
+        padding: 15px;
+    }
+
+    .case-study-category {
+        display: inline-block;
+        background-color: #4a80ff;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+
+    .case-study-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 15px;
+        font-weight: 500;
+        color: #555;
+    }
+
+    .case-study-stats span {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .case-study-stats i {
+        margin-right: 5px;
+        color: #4a80ff;
+    }
+
+    .case-studies-grid {
+        margin-top: 30px;
+    }
+
+    .case-study-card {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        margin-bottom: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .case-study-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .case-study-card-image {
+        position: relative;
+    }
+
+    .case-study-card-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .case-study-card-image .case-study-category {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        margin-bottom: 0;
+    }
+
+    .case-study-card-content {
+        padding: 20px;
+        background-color: white;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .case-study-card-content h4 {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+    }
+
+    .case-study-card-content p {
+        margin-bottom: 20px;
+    }
+
+    .case-study-card-content .btn {
+        margin-top: auto;
+    }
+
+    /* Modal Styling */
+    .case-study-modal-content h4 {
+        color: #4a80ff;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    .case-study-modal-content ul, 
+    .case-study-modal-content ol {
+        margin-bottom: 20px;
+    }
+
+    .case-study-results {
+        margin: 30px 0;
+    }
+
+    .result-item {
+        text-align: center;
+        padding: 20px 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        height: 100%;
+    }
+
+    .result-item i {
+        font-size: 2rem;
+        color: #4a80ff;
+        margin-bottom: 15px;
+    }
+
+    .result-item h5 {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    blockquote {
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-left: 5px solid #4a80ff;
+        margin: 25px 0;
+        font-style: italic;
+    }
+
+    blockquote footer {
+        margin-top: 10px;
+        font-weight: 600;
+        text-align: right;
+    }
+
+    @media (max-width: 768px) {
+        .featured-case-study {
+            padding: 20px;
+        }
+        
+        .case-study-content {
+            padding: 15px 0;
+        }
+        
+        .case-study-stats {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="static/images/logo.svg" alt="Abhios Consulting Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="solutions.html">Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="case-studies.html">Case Studies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash Messages -->
+    
+        
+    
+
+    <!-- Main Content -->
+    
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Case Studies</h1>
+        <p>Discover how Abhios Consulting has helped organizations achieve their technology goals through innovative solutions and expert guidance.</p>
+    </div>
+</section>
+
+<!-- Case Studies Section -->
+<section class="case-studies-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Our Success Stories</h2>
+            <p>Read about our proven track record of delivering transformative technology solutions across various industries.</p>
+        </div>
+
+        <!-- Featured Case Study -->
+        <div class="featured-case-study">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="case-study-image">
+                        <img src="static/images/case-study-cloud-migration.svg" alt="Cloud Migration Case Study" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="case-study-content">
+                        <span class="case-study-category">Cloud Infrastructure</span>
+                        <h3>Cloud Migration for Global Financial Services Firm</h3>
+                        <p class="case-study-stats">
+                            <span><i class="fas fa-chart-line"></i> 40% Cost Reduction</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 3x Performance Improvement</span>
+                            <span><i class="fas fa-calendar-alt"></i> 6-Month Implementation</span>
+                        </p>
+                        <p>Abhios Consulting helped a leading financial services firm transition from legacy on-premises infrastructure to a secure, scalable cloud environment. We designed and implemented a multi-cloud strategy utilizing AWS and Microsoft Azure, resulting in significant improvements in operational efficiency, security posture, and cost management.</p>
+                        <a href="#cloud-migration-details" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cloudMigrationModal">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Cloud Migration Case Study -->
+        <div class="modal fade" id="cloudMigrationModal" tabindex="-1" aria-labelledby="cloudMigrationModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cloudMigrationModalLabel">Cloud Migration for Global Financial Services Firm</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="case-study-modal-content">
+                            <h4>Client Overview</h4>
+                            <p>A multinational financial services corporation with operations in over 30 countries and 15,000+ employees.</p>
+                            
+                            <h4>Challenge</h4>
+                            <p>The client was facing escalating costs and operational limitations with their legacy data center infrastructure. Key challenges included:</p>
+                            <ul>
+                                <li>High maintenance costs for aging hardware</li>
+                                <li>Limited scalability during peak financial periods</li>
+                                <li>Complex disaster recovery processes</li>
+                                <li>Data silos affecting cross-departmental collaboration</li>
+                                <li>Increasing security compliance requirements</li>
+                            </ul>
+                            
+                            <h4>Solution</h4>
+                            <p>Abhios Consulting developed a comprehensive cloud migration strategy with the following components:</p>
+                            <ol>
+                                <li><strong>Assessment & Planning:</strong> Conducted thorough infrastructure analysis and workload prioritization</li>
+                                <li><strong>Multi-Cloud Architecture:</strong> Designed hybrid architecture leveraging AWS for compute resources and Azure for specific financial applications</li>
+                                <li><strong>Security Framework:</strong> Implemented zero-trust security model with advanced identity management and encryption</li>
+                                <li><strong>Data Migration:</strong> Utilized both online and offline migration techniques for minimal business disruption</li>
+                                <li><strong>Operational Transformation:</strong> Established DevSecOps practices and automated CI/CD pipelines</li>
+                            </ol>
+                            
+                            <h4>Implementation Approach</h4>
+                            <p>We followed a phased migration approach:</p>
+                            <ul>
+                                <li><strong>Phase 1:</strong> Non-critical applications and development environments</li>
+                                <li><strong>Phase 2:</strong> Data warehousing and analytics platforms</li>
+                                <li><strong>Phase 3:</strong> Core financial systems with parallel run periods</li>
+                                <li><strong>Phase 4:</strong> Decommissioning of legacy infrastructure</li>
+                            </ul>
+                            
+                            <h4>Results</h4>
+                            <div class="row case-study-results">
+                                <div class="col-md-4">
+                                    <div class="result-item">
+                                        <i class="fas fa-chart-pie"></i>
+                                        <h5>Cost Efficiency</h5>
+                                        <p>40% reduction in total infrastructure costs over 18 months</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="result-item">
+                                        <i class="fas fa-rocket"></i>
+                                        <h5>Performance</h5>
+                                        <p>300% improvement in application response times</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="result-item">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <h5>Security</h5>
+                                        <p>Achieved SOC2 and PCI DSS compliance with zero security incidents</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row case-study-results">
+                                <div class="col-md-4">
+                                    <div class="result-item">
+                                        <i class="fas fa-expand-arrows-alt"></i>
+                                        <h5>Scalability</h5>
+                                        <p>Successful handling of 5x normal transaction volume during peak periods</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="result-item">
+                                        <i class="fas fa-heartbeat"></i>
+                                        <h5>Reliability</h5>
+                                        <p>99.99% uptime with 15-minute disaster recovery capability</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="result-item">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <h5>Innovation</h5>
+                                        <p>50% faster deployment of new features and services</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h4>Client Testimonial</h4>
+                            <blockquote>
+                                "Abhios Consulting's expertise was invaluable in our cloud transformation journey. Their methodical approach and deep technical knowledge ensured a smooth migration with minimal disruption to our operations. We've achieved greater flexibility, significant cost savings, and improved our ability to innovate."
+                                <footer>- CTO, Global Financial Services Firm</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row case-studies-grid">
+            <!-- Case Study 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="case-study-card">
+                    <div class="case-study-card-image">
+                        <img src="static/images/case-study-security.svg" alt="Security Implementation Case Study" class="img-fluid">
+                        <div class="case-study-category">Cybersecurity</div>
+                    </div>
+                    <div class="case-study-card-content">
+                        <h4>Zero-Trust Security Implementation for Healthcare Provider</h4>
+                        <p class="case-study-stats">
+                            <span><i class="fas fa-shield-alt"></i> 95% Threat Reduction</span>
+                            <span><i class="fas fa-clock"></i> 4-Month Rollout</span>
+                        </p>
+                        <p>Developed and implemented a comprehensive zero-trust security architecture for a large healthcare provider, protecting sensitive patient data while ensuring regulatory compliance with HIPAA and GDPR.</p>
+                        <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#securityModal">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Study 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="case-study-card">
+                    <div class="case-study-card-image">
+                        <img src="static/images/case-study-payments.svg" alt="Payment System Case Study" class="img-fluid">
+                        <div class="case-study-category">Payment Systems</div>
+                    </div>
+                    <div class="case-study-card-content">
+                        <h4>Unified Payment Platform for E-Commerce Retailer</h4>
+                        <p class="case-study-stats">
+                            <span><i class="fas fa-shopping-cart"></i> 27% Conversion Increase</span>
+                            <span><i class="fas fa-globe"></i> 50+ Payment Methods</span>
+                        </p>
+                        <p>Designed and deployed a unified global payment platform for a major e-commerce retailer, integrating multiple payment methods, currencies, and regional compliance requirements.</p>
+                        <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#paymentsModal">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Study 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="case-study-card">
+                    <div class="case-study-card-image">
+                        <img src="static/images/case-study-digital.svg" alt="Digital Transformation Case Study" class="img-fluid">
+                        <div class="case-study-category">Digital Transformation</div>
+                    </div>
+                    <div class="case-study-card-content">
+                        <h4>Digital Transformation for Manufacturing Client</h4>
+                        <p class="case-study-stats">
+                            <span><i class="fas fa-industry"></i> 35% Efficiency Gain</span>
+                            <span><i class="fas fa-chart-bar"></i> 22% Cost Reduction</span>
+                        </p>
+                        <p>Led a comprehensive digital transformation initiative for a traditional manufacturing company, implementing IoT sensors, real-time analytics, and automated workflows.</p>
+                        <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#digitalModal">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2>Ready to Transform Your Technology Landscape?</h2>
+                <p>Let's discuss how Abhios Consulting can help your organization achieve its technology goals with tailored solutions designed for your specific needs and challenges.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Us Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Modals for other case studies -->
+<!-- Security Case Study Modal -->
+<div class="modal fade" id="securityModal" tabindex="-1" aria-labelledby="securityModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="securityModalLabel">Zero-Trust Security Implementation for Healthcare Provider</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="case-study-modal-content">
+                    <h4>Client Overview</h4>
+                    <p>A leading healthcare provider with 12 hospitals, 60+ outpatient facilities, and over 20,000 employees managing millions of patient records.</p>
+                    
+                    <h4>Challenge</h4>
+                    <p>In an era of increasing healthcare data breaches and stringent regulations, the client faced numerous security challenges:</p>
+                    <ul>
+                        <li>Growing threats from sophisticated ransomware attacks targeting healthcare institutions</li>
+                        <li>Outdated perimeter-based security model</li>
+                        <li>Complex regulatory compliance requirements (HIPAA, GDPR, state privacy laws)</li>
+                        <li>Distributed workforce with varying access needs</li>
+                        <li>Integration of numerous legacy and modern medical systems</li>
+                    </ul>
+                    
+                    <h4>Solution</h4>
+                    <p>Abhios Consulting implemented a comprehensive zero-trust security framework with these key components:</p>
+                    <ol>
+                        <li><strong>Identity Management:</strong> Implemented multi-factor authentication and risk-based access controls</li>
+                        <li><strong>Micro-segmentation:</strong> Established granular network segments to contain potential breaches</li>
+                        <li><strong>Continuous Monitoring:</strong> Deployed real-time security monitoring with behavioral analytics</li>
+                        <li><strong>Data Protection:</strong> Implemented end-to-end encryption and data loss prevention tools</li>
+                        <li><strong>DevSecOps Integration:</strong> Embedded security throughout the software development lifecycle</li>
+                    </ol>
+                    
+                    <h4>Implementation Approach</h4>
+                    <p>We followed a phased approach prioritizing critical systems:</p>
+                    <ul>
+                        <li><strong>Phase 1:</strong> Identity and access management modernization</li>
+                        <li><strong>Phase 2:</strong> Network segmentation and endpoint protection</li>
+                        <li><strong>Phase 3:</strong> Data protection and encryption</li>
+                        <li><strong>Phase 4:</strong> Continuous security monitoring and response</li>
+                    </ul>
+                    
+                    <h4>Results</h4>
+                    <div class="row case-study-results">
+                        <div class="col-md-4">
+                            <div class="result-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <h5>Threat Reduction</h5>
+                                <p>95% reduction in successful security incidents</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="result-item">
+                                <i class="fas fa-file-contract"></i>
+                                <h5>Compliance</h5>
+                                <p>Full HIPAA and GDPR compliance with simplified audit reporting</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="result-item">
+                                <i class="fas fa-clock"></i>
+                                <h5>Response Time</h5>
+                                <p>87% decrease in time to detect and respond to potential threats</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>Client Testimonial</h4>
+                    <blockquote>
+                        "Working with Abhios Consulting has transformed our security posture. Their zero-trust implementation has given us confidence in our ability to protect sensitive patient data while maintaining operational efficiency. Their team's healthcare-specific knowledge was particularly valuable."
+                        <footer>- CISO, Healthcare Provider</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Payments Case Study Modal -->
+<div class="modal fade" id="paymentsModal" tabindex="-1" aria-labelledby="paymentsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="paymentsModalLabel">Unified Payment Platform for E-Commerce Retailer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Modal content for Payments Case Study -->
+                <div class="case-study-modal-content">
+                    <h4>Client Overview</h4>
+                    <p>A rapidly growing global e-commerce retailer operating in 25 countries with annual sales exceeding $500 million.</p>
+                    
+                    <h4>Challenge</h4>
+                    <p>The client's payment infrastructure was hindering international expansion and customer experience:</p>
+                    <ul>
+                        <li>Fragmented payment systems across different regions</li>
+                        <li>Limited payment options causing cart abandonment</li>
+                        <li>Complex compliance with varying regional regulations</li>
+                        <li>High transaction fees and operational overhead</li>
+                        <li>Limited visibility into payment analytics</li>
+                    </ul>
+                    
+                    <h4>Solution</h4>
+                    <p>Abhios Consulting developed a unified global payment platform:</p>
+                    <ol>
+                        <li><strong>Unified Architecture:</strong> Centralized platform with regional adaptability</li>
+                        <li><strong>Multi-Method Integration:</strong> Incorporated 50+ payment methods across global markets</li>
+                        <li><strong>Intelligent Routing:</strong> AI-powered transaction routing to optimize approval rates and costs</li>
+                        <li><strong>Compliance Framework:</strong> Built-in regulatory compliance for PCI-DSS, GDPR, and regional requirements</li>
+                        <li><strong>Analytics Dashboard:</strong> Comprehensive payment analytics and reporting</li>
+                    </ol>
+                    
+                    <h4>Implementation Approach</h4>
+                    <p>We implemented the solution through these key phases:</p>
+                    <ul>
+                        <li><strong>Phase 1:</strong> Core platform development and primary market integration</li>
+                        <li><strong>Phase 2:</strong> Regional payment method expansion</li>
+                        <li><strong>Phase 3:</strong> Analytics and optimization tools</li>
+                        <li><strong>Phase 4:</strong> Legacy system migration and decommissioning</li>
+                    </ul>
+                    
+                    <h4>Results</h4>
+                    <div class="row case-study-results">
+                        <div class="col-md-4">
+                            <div class="result-item">
+                                <i class="fas fa-shopping-cart"></i>
+                                <h5>Conversion</h5>
+                                <p>27% increase in checkout conversion rate</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="result-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <h5>Cost Savings</h5>
+                                <p>18% reduction in payment processing costs</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="result-item">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <h5>Expansion</h5>
+                                <p>Successfully expanded to 10 new markets in 6 months</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>Client Testimonial</h4>
+                    <blockquote>
+                        "The unified payment platform developed by Abhios Consulting has been a game-changer for our global expansion. We've seen dramatic improvements in checkout conversion and gained the ability to enter new markets with minimal friction. Their expertise in the payments ecosystem was evident throughout the project."
+                        <footer>- VP of E-Commerce, Global Retailer</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Digital Transformation Case Study Modal -->
+<div class="modal fade" id="digitalModal" tabindex="-1" aria-labelledby="digitalModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="digitalModalLabel">Digital Transformation for Manufacturing Client</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Modal content for Digital Transformation Case Study -->
+                <div class="case-study-modal-content">
+                    <h4>Client Overview</h4>
+                    <p>A traditional manufacturing company with 50+ years of history, 5 production facilities, and 3,000 employees producing industrial equipment.</p>
+                    
+                    <h4>Challenge</h4>
+                    <p>The client faced significant challenges in a rapidly evolving industry landscape:</p>
+                    <ul>
+                        <li>Aging production systems with limited automation</li>
+                        <li>Inefficient manual data collection and reporting processes</li>
+                        <li>Limited visibility into supply chain operations</li>
+                        <li>Rising operational costs and competitive pressure</li>
+                        <li>Difficulty attracting technical talent</li>
+                    </ul>
+                    
+                    <h4>Solution</h4>
+                    <p>Abhios Consulting delivered a comprehensive digital transformation program:</p>
+                    <ol>
+                        <li><strong>IoT Implementation:</strong> Deployed sensors throughout production facilities for real-time monitoring</li>
+                        <li><strong>Data Platform:</strong> Created a unified data lake and analytics platform</li>
+                        <li><strong>Predictive Maintenance:</strong> Implemented AI-driven predictive maintenance system</li>
+                        <li><strong>Supply Chain Visibility:</strong> Developed end-to-end supply chain tracking and management</li>
+                        <li><strong>Process Automation:</strong> Automated key workflows and reporting processes</li>
+                    </ol>
+                    
+                    <h4>Implementation Approach</h4>
+                    <p>The transformation was implemented through a phased approach:</p>
+                    <ul>
+                        <li><strong>Phase 1:</strong> IoT infrastructure and data foundation</li>
+                        <li><strong>Phase 2:</strong> Analytics capabilities and dashboards</li>
+                        <li><strong>Phase 3:</strong> Predictive maintenance and process optimization</li>
+                        <li><strong>Phase 4:</strong> Supply chain integration and advanced automation</li>
+                    </ul>
+                    
+                    <h4>Results</h4>
+                    <div class="row case-study-results">
+                        <div class="col-md-4">
+                            <div class="result-item">
+                                <i class="fas fa-industry"></i>
+                                <h5>Operational Efficiency</h5>
+                                <p>35% improvement in overall equipment effectiveness</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="result-item">
+                                <i class="fas fa-chart-line"></i>
+                                <h5>Cost Reduction</h5>
+                                <p>22% decrease in maintenance costs</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="result-item">
+                                <i class="fas fa-truck"></i>
+                                <h5>Supply Chain</h5>
+                                <p>40% reduction in inventory holding costs</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>Client Testimonial</h4>
+                    <blockquote>
+                        "Abhios Consulting guided us through a complete digital transformation that modernized our operations while respecting our company's heritage and values. The results have exceeded our expectations—we've significantly improved efficiency, reduced costs, and positioned ourselves at the forefront of manufacturing innovation."
+                        <footer>- CEO, Manufacturing Company</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 footer-widget footer-about">
+                    <img src="static/images/logo.svg" alt="Abhios Consulting Logo">
+                    <p>Abhios Consulting delivers innovative technology solutions focused on Cloud, Security, and Payments to help businesses thrive in the digital era.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-widget">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="solutions.html">Solutions</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="news.html">News</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="solutions.html#cloud">Cloud Infrastructure</a></li>
+                        <li><a href="solutions.html#payments">Payment Systems</a></li>
+                        <li><a href="solutions.html#digital">Digital Transformation</a></li>
+                        <li><a href="solutions.html#strategy">IT Strategy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Tech Park, Innovation Drive, San Francisco, CA 94103</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> contact@abhiosconsulting.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="copyright">
+                            &copy; 2025 Abhios Consulting. All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="static/js/main.js"></script>
+    
+    
+</body>
+</html>
