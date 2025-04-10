@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="400" fill="#f5f5f5"/>
+    
+    <!-- Security Shield Illustration -->
+    <g>
+        <!-- Main Shield -->
+        <path d="M400,80 L550,120 C550,250 500,320 400,350 C300,320 250,250 250,120 L400,80 Z" fill="#e9f0fa" stroke="#305bb9" stroke-width="3"/>
+        
+        <!-- Shield Inner Pattern -->
+        <path d="M400,100 L525,135 C525,245 480,300 400,330 C320,300 275,245 275,135 L400,100 Z" fill="#4a80ff" opacity="0.2" stroke="#305bb9" stroke-width="1"/>
+        
+        <!-- Lock Icon -->
+        <rect x="350" y="170" width="100" height="80" rx="10" fill="#305bb9"/>
+        <rect x="370" y="150" width="60" height="30" rx="15" fill="#305bb9"/>
+        <rect x="380" y="160" width="40" height="10" rx="5" fill="#ffffff"/>
+        <circle cx="400" cy="210" r="15" fill="#ffffff"/>
+        <rect x="397" y="195" width="6" height="30" rx="3" fill="#305bb9"/>
+        
+        <!-- Circuit Pattern -->
+        <path d="M300,120 L350,170" stroke="#305bb9" stroke-width="2" opacity="0.6" stroke-dasharray="5,3"/>
+        <path d="M500,120 L450,170" stroke="#305bb9" stroke-width="2" opacity="0.6" stroke-dasharray="5,3"/>
+        <path d="M300,280 L350,250" stroke="#305bb9" stroke-width="2" opacity="0.6" stroke-dasharray="5,3"/>
+        <path d="M500,280 L450,250" stroke="#305bb9" stroke-width="2" opacity="0.6" stroke-dasharray="5,3"/>
+        
+        <!-- Connection Nodes -->
+        <circle cx="300" cy="120" r="8" fill="#4a80ff"/>
+        <circle cx="500" cy="120" r="8" fill="#4a80ff"/>
+        <circle cx="300" cy="280" r="8" fill="#4a80ff"/>
+        <circle cx="500" cy="280" r="8" fill="#4a80ff"/>
+        <circle cx="350" cy="170" r="5" fill="#4a80ff"/>
+        <circle cx="450" cy="170" r="5" fill="#4a80ff"/>
+        <circle cx="350" cy="250" r="5" fill="#4a80ff"/>
+        <circle cx="450" cy="250" r="5" fill="#4a80ff"/>
+        
+        <!-- Computer Icons -->
+        <g transform="translate(200, 180)">
+            <rect x="0" y="0" width="60" height="40" rx="3" fill="#ffffff" stroke="#305bb9" stroke-width="2"/>
+            <rect x="20" y="40" width="20" height="10" fill="#ffffff" stroke="#305bb9" stroke-width="2"/>
+            <rect x="10" y="50" width="40" height="5" rx="2" fill="#305bb9"/>
+        </g>
+        
+        <g transform="translate(540, 180)">
+            <rect x="0" y="0" width="60" height="40" rx="3" fill="#ffffff" stroke="#305bb9" stroke-width="2"/>
+            <rect x="20" y="40" width="20" height="10" fill="#ffffff" stroke="#305bb9" stroke-width="2"/>
+            <rect x="10" y="50" width="40" height="5" rx="2" fill="#305bb9"/>
+        </g>
+        
+        <!-- Security Icons -->
+        <g transform="translate(250, 80)">
+            <circle cx="0" cy="0" r="15" fill="#ffffff" stroke="#305bb9" stroke-width="2"/>
+            <text x="-8" y="5" font-family="Arial" font-size="16" fill="#305bb9">🔒</text>
+        </g>
+        
+        <g transform="translate(550, 80)">
+            <circle cx="0" cy="0" r="15" fill="#ffffff" stroke="#305bb9" stroke-width="2"/>
+            <text x="-8" y="5" font-family="Arial" font-size="16" fill="#305bb9">🔒</text>
+        </g>
+    </g>
+</svg>

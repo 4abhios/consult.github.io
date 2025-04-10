@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="400" fill="#e9f0fa"/>
+    
+    <!-- Cloud Illustration with Tech Pattern -->
+    <g>
+        <!-- Main Cloud shapes -->
+        <path d="M600,200 C600,150 550,120 500,120 C450,120 410,150 410,200 C410,250 450,280 500,280 C550,280 600,250 600,200 Z" fill="#4a80ff" opacity="0.7"/>
+        <path d="M200,200 C200,150 250,120 300,120 C350,120 390,150 390,200 C390,250 350,280 300,280 C250,280 200,250 200,200 Z" fill="#305bb9" opacity="0.8"/>
+        
+        <!-- Server Icons -->
+        <rect x="250" y="180" width="50" height="80" rx="5" fill="#ffffff" stroke="#305bb9" stroke-width="2"/>
+        <rect x="260" y="190" width="30" height="5" rx="2" fill="#4a80ff"/>
+        <rect x="260" y="205" width="30" height="5" rx="2" fill="#4a80ff"/>
+        <rect x="260" y="220" width="30" height="5" rx="2" fill="#4a80ff"/>
+        <rect x="260" y="235" width="30" height="5" rx="2" fill="#4a80ff"/>
+        
+        <rect x="500" y="180" width="50" height="80" rx="5" fill="#ffffff" stroke="#305bb9" stroke-width="2"/>
+        <rect x="510" y="190" width="30" height="5" rx="2" fill="#4a80ff"/>
+        <rect x="510" y="205" width="30" height="5" rx="2" fill="#4a80ff"/>
+        <rect x="510" y="220" width="30" height="5" rx="2" fill="#4a80ff"/>
+        <rect x="510" y="235" width="30" height="5" rx="2" fill="#4a80ff"/>
+        
+        <!-- Connection Lines -->
+        <path d="M300,220 L500,220" stroke="#305bb9" stroke-width="3" stroke-dasharray="10,5"/>
+        
+        <!-- Connection Dots -->
+        <circle cx="300" cy="220" r="8" fill="#4a80ff"/>
+        <circle cx="400" cy="220" r="8" fill="#4a80ff"/>
+        <circle cx="500" cy="220" r="8" fill="#4a80ff"/>
+        
+        <!-- Tech Circuit Pattern -->
+        <path d="M150,100 L650,100" stroke="#305bb9" stroke-width="1" opacity="0.3"/>
+        <path d="M150,300 L650,300" stroke="#305bb9" stroke-width="1" opacity="0.3"/>
+        <path d="M150,100 L150,300" stroke="#305bb9" stroke-width="1" opacity="0.3"/>
+        <path d="M650,100 L650,300" stroke="#305bb9" stroke-width="1" opacity="0.3"/>
+        
+        <!-- Circuit nodes -->
+        <circle cx="150" cy="100" r="5" fill="#4a80ff" opacity="0.5"/>
+        <circle cx="650" cy="100" r="5" fill="#4a80ff" opacity="0.5"/>
+        <circle cx="150" cy="300" r="5" fill="#4a80ff" opacity="0.5"/>
+        <circle cx="650" cy="300" r="5" fill="#4a80ff" opacity="0.5"/>
+        
+        <!-- Additional circuit patterns -->
+        <path d="M150,100 C250,150 350,150 400,100" stroke="#305bb9" stroke-width="1" opacity="0.3" fill="none"/>
+        <path d="M400,300 C450,250 550,250 650,300" stroke="#305bb9" stroke-width="1" opacity="0.3" fill="none"/>
+        
+        <!-- AWS and Azure Icons -->
+        <g transform="translate(320, 140)">
+            <polygon points="0,0 30,0 30,30 0,30" fill="#FF9900"/>
+            <text x="5" y="20" font-family="Arial" font-size="10" fill="white">AWS</text>
+        </g>
+        
+        <g transform="translate(450, 140)">
+            <rect x="0" y="0" width="30" height="30" fill="#0078D4"/>
+            <text x="5" y="20" font-family="Arial" font-size="10" fill="white">Azure</text>
+        </g>
+    </g>
+</svg>
